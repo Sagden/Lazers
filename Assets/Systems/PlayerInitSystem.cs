@@ -22,6 +22,8 @@ namespace Client {
             player.Get2(0).lineRenderer.startWidth = 0.1f;
             player.Get2(0).lineRenderer.endWidth = 0.1f;
             player.Get2(0).lineRenderer.numCornerVertices = 5;
+            player.Get2(0).lineRenderer.material = objectsContainer.rayMaterial;
+            player.Get2(0).lineRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.TwoSided;
         }
     }
 }

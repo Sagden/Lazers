@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: FloorMaterial
   m_Shader: {fileID: 28, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _WINDQUALITY_NONE
   m_LightmapFlags: 0
@@ -20,12 +20,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _Cube:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1.65, y: 1}
+        m_Scale: {x: 30, y: 30}
         m_Offset: {x: 0, y: 0}
     - _Mask:
         m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
@@ -84,8 +84,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceTex:
         m_Texture: {fileID: 0}
@@ -109,8 +109,8 @@ Material:
     - _Mode: 0
     - _NormalMapKwToggle: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.0448
-    - _Shininess: 0.354
+    - _Parallax: 0.005
+    - _Shininess: 0.01
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -128,10 +128,10 @@ Material:
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9339623, g: 0.36565503, b: 0.36565503, a: 1}
+    - _Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
-    - _ReflectColor: {r: 1, g: 0.1273585, b: 0.1273585, a: 1}
-    - _SpecColor: {r: 1, g: 0.4575472, b: 0.4575472, a: 1}
+    - _ReflectColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _Specular: {r: 1, g: 0.3066038, b: 0.3066038, a: 0.972549}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
