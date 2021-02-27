@@ -11,11 +11,18 @@ namespace Client {
         
         public void Init () 
         {
+
             var newPlayer = _world.NewEntity();
             newPlayer.Replace(new PlayerComponent());
             newPlayer.Replace(new DirectionComponent { direction = Quaternion.Euler(0, 0, 0) });
             newPlayer.Replace(new RayComponent());
 
+            LineRendererInit();
+
+        }
+
+        private void LineRendererInit()
+        {
 
             player.Get2(0).lineRenderer = objectsContainer.player.AddComponent<LineRenderer>();
             player.Get2(0).lineRenderer.positionCount = 1;
@@ -24,6 +31,7 @@ namespace Client {
             player.Get2(0).lineRenderer.numCornerVertices = 5;
             player.Get2(0).lineRenderer.material = objectsContainer.rayMaterial;
             player.Get2(0).lineRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.TwoSided;
+
         }
     }
 }

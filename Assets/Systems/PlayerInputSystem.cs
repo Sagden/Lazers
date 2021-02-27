@@ -13,13 +13,16 @@ namespace Client
 
         void IEcsRunSystem.Run () 
         {
-            if (!Input.GetMouseButton(0)) { oldMousePosition = 0; return; }
+            if (!Input.GetMouseButton(0))  return;
+
+            if (Input.GetMouseButtonDown(0)) 
+                oldMousePosition = Input.mousePosition.x;
 
             float deltaX = Input.mousePosition.x - oldMousePosition;
 
             foreach (var player in players)
             {
-                players.Get2(player).direction *= Quaternion.Euler(0, -deltaX, 0);
+                players.Get2(player).direction *= Quaternion.Euler(0, -deltaX / 10, 0);
             }
 
             oldMousePosition = Input.mousePosition.x;

@@ -25,7 +25,7 @@ public class RayBehaviourSystem : IEcsRunSystem
         if (pointIndex > 100) return;
 
         RaycastHit hit;
-        if (Physics.Raycast(outside, direction, out hit, 20f))
+        if (Physics.Raycast(outside, direction, out hit, 50f))
         {
 
             player.Get3(0).lineRenderer.positionCount = pointIndex + 1;
@@ -34,13 +34,13 @@ public class RayBehaviourSystem : IEcsRunSystem
             Vector3 firstVector = outside - hit.point;
             float angle = Vector3.Angle(Quaternion.AngleAxis(-90, Vector3.up) * hit.normal, firstVector);
 
-            AddRayPoint(hit.point, (Quaternion.AngleAxis(90 - angle, Vector3.up) * hit.normal), pointIndex + 1);
+            AddRayPoint(hit.point, Quaternion.AngleAxis(90 - angle, Vector3.up) * hit.normal, pointIndex + 1);
 
         }
         else
         {
             player.Get3(0).lineRenderer.positionCount = pointIndex + 1;
-            player.Get3(0).lineRenderer.SetPosition(pointIndex, outside + direction * 20);
+            player.Get3(0).lineRenderer.SetPosition(pointIndex, outside + direction * 50);
         }
     }
 }
